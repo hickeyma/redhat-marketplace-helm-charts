@@ -39,7 +39,7 @@ maintainers:
   name: scottrigby
 - email: miroslav.hadzhiev@gmail.com
   name: Xtigyro
-ame: kube-prometheus-stack
+name: kube-prometheus-stack
 sources:
 - https://github.com/prometheus-community/helm-charts
 - https://github.com/prometheus-operator/kube-prometheus
