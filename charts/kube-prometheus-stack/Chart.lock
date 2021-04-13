@@ -9,4 +9,4 @@ dependencies:
   repository: https://hickeyma.github.io/redhat-marketplace-helm-charts
   version: 6.7.3
 digest: sha256:42d4a7f0a2b5da0854bed85f4fbe244cfaba5a829fe2b5e8d398095709713fab
-generated: "2021-04-13T09:56:45.592799+01:00"
+generated: "2021-04-13T17:56:41.464872+01:00"
