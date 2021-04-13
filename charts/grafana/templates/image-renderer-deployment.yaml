@@ -63,9 +63,9 @@ spec:
       containers:
         - name: {{ .Chart.Name }}-image-renderer
           {{- if .Values.imageRenderer.image.sha }}
-          image: "{{ .Values.imageRenderer.image.repository }}:{{ .Values.imageRenderer.image.tag }}@sha256:{{ .Values.imageRenderer.image.sha }}"
+          image: "{{ .Values.imageRenderer.image.path }}@sha256:{{ .Values.imageRenderer.image.sha }}"
           {{- else }}
-          image: "{{ .Values.imageRenderer.image.repository }}:{{ .Values.imageRenderer.image.tag }}"
+          image: "{{ .Values.imageRenderer.image.path }}"
           {{- end }}
           imagePullPolicy: {{ .Values.imageRenderer.image.pullPolicy }}
         {{- if .Values.imageRenderer.command }}

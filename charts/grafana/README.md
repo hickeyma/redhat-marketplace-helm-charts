@@ -5,9 +5,11 @@
 ## Get Repo Info
 
 ```console
-helm repo add grafana https://grafana.github.io/helm-charts
+helm repo add grafana https://hickeyma.github.io/redhat-marketplace-helm-charts
 helm repo update
 ```
+
+**Note: This chart is cloned from https://grafana.github.io/helm-charts and updated to use single image variable.**
 
 _See [helm repo](https://helm.sh/docs/helm/helm_repo/) for command documentation._
 

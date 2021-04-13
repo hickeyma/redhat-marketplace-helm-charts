@@ -14,9 +14,11 @@ _Note: This chart was formerly named `prometheus-operator` chart, now renamed to
 ## Get Repo Info
 
 ```console
-helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo add prometheus-community https://hickeyma.github.io/redhat-marketplace-helm-charts
 helm repo update
 ```
+
+**Note: This chart is cloned from https://prometheus-community.github.io/helm-charts and updated to use single image variable.**
 
 _See [helm repo](https://helm.sh/docs/helm/helm_repo/) for command documentation._
 
