@@ -2,9 +2,10 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 image:
-  repository: quay.io/prometheus/node-exporter
-  tag: v1.1.2
+  #repository: quay.io/prometheus/node-exporter
+  #tag: v1.1.2
   pullPolicy: IfNotPresent
+  path: quay.io/prometheus/node-exporter:v1.1.2
 
 service:
   type: ClusterIP

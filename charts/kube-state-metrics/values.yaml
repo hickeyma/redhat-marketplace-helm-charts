@@ -1,9 +1,10 @@
 # Default values for kube-state-metrics.
 prometheusScrape: true
 image:
-  repository: k8s.gcr.io/kube-state-metrics/kube-state-metrics
-  tag: v1.9.8
+  #repository: k8s.gcr.io/kube-state-metrics/kube-state-metrics
+  #tag: v1.9.8
   pullPolicy: IfNotPresent
+  path: k8s.gcr.io/kube-state-metrics/kube-state-metrics:v1.9.8
 
 imagePullSecrets: []
 # - name: "image-pull-secret"

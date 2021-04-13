@@ -383,9 +383,10 @@ alertmanager:
     ## Image of Alertmanager
     ##
     image:
-      repository: quay.io/prometheus/alertmanager
+      #repository: quay.io/prometheus/alertmanager
       tag: v0.21.0
       sha: ""
+      path: quay.io/prometheus/alertmanager:v0.21.0
 
     ## If true then the user will be responsible to provide a secret with alertmanager configuration
     ## So when true the config part will be ignored (including templateFiles) and the one in the secret will be used
@@ -1289,10 +1290,11 @@ prometheusOperator:
     patch:
       enabled: true
       image:
-        repository: jettech/kube-webhook-certgen
-        tag: v1.5.0
+        #repository: jettech/kube-webhook-certgen
+        #tag: v1.5.0
         sha: ""
         pullPolicy: IfNotPresent
+        path: jettech/kube-webhook-certgen:v1.5.0
       resources: {}
       ## Provide a priority class name to the webhook patching job
       ##
@@ -1487,10 +1489,11 @@ prometheusOperator:
   ## Prometheus-operator image
   ##
   image:
-    repository: quay.io/prometheus-operator/prometheus-operator
-    tag: v0.46.0
+    #repository: quay.io/prometheus-operator/prometheus-operator
+    #tag: v0.46.0
     sha: ""
     pullPolicy: IfNotPresent
+    path: quay.io/prometheus-operator/prometheus-operator:v0.46.0
 
   ## Prometheus image to use for prometheuses managed by the operator
   ##
@@ -1503,9 +1506,10 @@ prometheusOperator:
   ## Prometheus-config-reloader image to use for config and rule reloading
   ##
   prometheusConfigReloaderImage:
-    repository: quay.io/prometheus-operator/prometheus-config-reloader
-    tag: v0.46.0
+    #repository: quay.io/prometheus-operator/prometheus-config-reloader
+    #tag: v0.46.0
     sha: ""
+    path: quay.io/prometheus-operator/prometheus-config-reloader:v0.46.0
 
   ## Set the prometheus config reloader side-car CPU limit
   ##
@@ -1822,9 +1826,10 @@ prometheus:
     ## Image of Prometheus.
     ##
     image:
-      repository: quay.io/prometheus/prometheus
+      #repository: quay.io/prometheus/prometheus
       tag: v2.24.0
       sha: ""
+      path: quay.io/prometheus/prometheus:v2.24.0
 
     ## Tolerations for use with node taints
     ## ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/

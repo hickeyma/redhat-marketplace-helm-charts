@@ -33,9 +33,9 @@ spec:
       containers:
         - name: {{ template "kube-prometheus-stack.name" . }}
           {{- if .Values.prometheusOperator.image.sha }}
-          image: "{{ .Values.prometheusOperator.image.repository }}:{{ .Values.prometheusOperator.image.tag }}@sha256:{{ .Values.prometheusOperator.image.sha }}"
+          image: "{{ .Values.prometheusOperator.image.path }}@sha256:{{ .Values.prometheusOperator.image.sha }}"
           {{- else }}
-          image: "{{ .Values.prometheusOperator.image.repository }}:{{ .Values.prometheusOperator.image.tag }}"
+          image: "{{ .Values.prometheusOperator.image.path }}"
           {{- end }}
           imagePullPolicy: "{{ .Values.prometheusOperator.image.pullPolicy }}"
           args:
@@ -66,9 +66,9 @@ spec:
             - --alertmanager-default-base-image={{ .Values.prometheusOperator.alertmanagerDefaultBaseImage }}
             {{- end }}
             {{- if .Values.prometheusOperator.prometheusConfigReloaderImage.sha }}
-            - --prometheus-config-reloader={{ .Values.prometheusOperator.prometheusConfigReloaderImage.repository }}:{{ .Values.prometheusOperator.prometheusConfigReloaderImage.tag }}@sha256:{{ .Values.prometheusOperator.prometheusConfigReloaderImage.sha }}
+            - --prometheus-config-reloader={{ .Values.prometheusOperator.prometheusConfigReloaderImage.path }}@sha256:{{ .Values.prometheusOperator.prometheusConfigReloaderImage.sha }}
             {{- else }}
-            - --prometheus-config-reloader={{ .Values.prometheusOperator.prometheusConfigReloaderImage.repository }}:{{ .Values.prometheusOperator.prometheusConfigReloaderImage.tag }}
+            - --prometheus-config-reloader={{ .Values.prometheusOperator.prometheusConfigReloaderImage.path }}
             {{- end }}
             - --config-reloader-cpu={{ .Values.prometheusOperator.configReloaderCpu }}
             - --config-reloader-memory={{ .Values.prometheusOperator.configReloaderMemory }}

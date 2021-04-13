@@ -173,7 +173,7 @@ spec:
           readOnly: true
 {{- end }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
-        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        image: "{{ .Values.image.path }}"
         ports:
         - containerPort: 8080
         livenessProbe:

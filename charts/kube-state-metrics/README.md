@@ -5,9 +5,11 @@ Installs the [kube-state-metrics agent](https://github.com/kubernetes/kube-state
 ## Get Repo Info
 
 ```console
-helm repo add kube-state-metrics https://kubernetes.github.io/kube-state-metrics
+helm repo add kube-state-metrics https://hickeyma.github.io/redhat-marketplace-helm-charts
 helm repo update
 ```
+
+**Note: This chart is cloned from https://kubernetes.github.io/kube-state-metrics and updated to use single image variable.**
 
 _See [helm repo](https://helm.sh/docs/helm/helm_repo/) for command documentation._
 
