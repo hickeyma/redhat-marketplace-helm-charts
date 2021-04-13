@@ -3,7 +3,7 @@ entries:
   grafana:
   - apiVersion: v2
     appVersion: 7.5.3
-    created: "2021-04-13T09:40:47.166363+01:00"
+    created: "2021-04-13T10:03:37.044449+01:00"
     description: The leading tool for querying and visualizing time series and metrics.
     digest: dd91a5603f0e776f49f0c0d5883c10fd604915d0d666655ddd7ba23ff8d3d147
     home: https://grafana.net
@@ -27,10 +27,62 @@ entries:
     urls:
     - https://hickeyma.github.io/redhat-marketplace-helm-charts/grafana-6.7.3.tgz
     version: 6.7.3
+  kube-prometheus-stack:
+  - annotations:
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+        - name: Upstream Project
+          url: https://github.com/prometheus-operator/kube-prometheus
+      artifacthub.io/operator: "true"
+    apiVersion: v2
+    appVersion: 0.46.0
+    created: "2021-04-13T10:03:37.064405+01:00"
+    dependencies:
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://hickeyma.github.io/redhat-marketplace-helm-charts
+      version: 2.13.*
+    - condition: nodeExporter.enabled
+      name: prometheus-node-exporter
+      repository: https://hickeyma.github.io/redhat-marketplace-helm-charts
+      version: 1.16.*
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://hickeyma.github.io/redhat-marketplace-helm-charts
+      version: 6.7.*
+    description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards, and Prometheus rules combined with documentation and scripts to provide easy to operate end-to-end Kubernetes cluster monitoring with Prometheus using the Prometheus Operator.
+    digest: 611825abeeb5c3380583a93409f6f10c101c2db3bce512737d4db853a5725bfd
+    home: https://github.com/prometheus-operator/kube-prometheus
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - operator
+    - prometheus
+    - kube-prometheus
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - name: vsliouniaev
+    - name: bismarck
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    - email: scott@r6by.com
+      name: scottrigby
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    name: kube-prometheus-stack
+    sources:
+    - https://github.com/prometheus-community/helm-charts
+    - https://github.com/prometheus-operator/kube-prometheus
+    type: application
+    urls:
+    - https://hickeyma.github.io/redhat-marketplace-helm-charts/kube-prometheus-stack-14.6.2.tgz
+    version: 14.6.2
   kube-state-metrics:
   - apiVersion: v1
     appVersion: 1.9.8
-    created: "2021-04-13T09:40:47.167337+01:00"
+    created: "2021-04-13T10:03:37.06553+01:00"
     description: Install kube-state-metrics to generate and expose cluster-level metrics
     digest: 77d5a26e0e0038b95f943bfa49ae63c16bb82f0ab5e4f54e7fdfe34fc95fe70f
     home: https://github.com/kubernetes/kube-state-metrics/
@@ -53,7 +105,7 @@ entries:
   prometheus-node-exporter:
   - apiVersion: v1
     appVersion: 1.1.2
-    created: "2021-04-13T09:40:47.168141+01:00"
+    created: "2021-04-13T10:03:37.066418+01:00"
     description: A Helm chart for prometheus node-exporter
     digest: cd5113db49f0585a7ef473471049d0a6e910772e9319d453e024e0859692466a
     home: https://github.com/prometheus/node_exporter/
@@ -72,4 +124,4 @@ entries:
     urls:
     - https://hickeyma.github.io/redhat-marketplace-helm-charts/prometheus-node-exporter-1.16.2.tgz
     version: 1.16.2
-generated: "2021-04-13T09:40:47.16422+01:00"
+generated: "2021-04-13T10:03:37.04215+01:00"
